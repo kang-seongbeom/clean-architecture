@@ -6,10 +6,12 @@ import com.example.cleanbuckpal.account.domain.Activity;
 import com.example.cleanbuckpal.account.domain.Activity.ActivityId;
 import com.example.cleanbuckpal.account.domain.ActivityWindow;
 import com.example.cleanbuckpal.account.domain.Money;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 class AccountMapper {
 
     public Account mapToDomainEntity(AccountJpaEntity account, List<ActivityJpaEntity> activities, Long withdrawalBalance, Long depositBalance) {

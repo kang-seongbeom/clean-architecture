@@ -1,15 +1,14 @@
-package com.example.cleanbuckpal.application.domain;
+package com.example.cleanbuckpal.account.application.domain;
 
 import com.example.cleanbuckpal.account.domain.Account;
 import com.example.cleanbuckpal.account.domain.Account.AccountId;
 import com.example.cleanbuckpal.account.domain.ActivityWindow;
 import com.example.cleanbuckpal.account.domain.Money;
-import com.example.cleanbuckpal.application.common.AccountTestData;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.example.cleanbuckpal.application.common.AccountTestData.defaultAccount;
-import static com.example.cleanbuckpal.application.common.ActivityTestData.defaultActivity;
+import static com.example.cleanbuckpal.common.AccountTestData.defaultAccount;
+import static com.example.cleanbuckpal.common.ActivityTestData.defaultActivity;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class AccountTest {

@@ -10,24 +10,24 @@ import java.util.List;
 interface ActivityRepository extends JpaRepository<ActivityJpaEntity,Long> {
 
     @Query("select a from ActivityJpaEntity a " +
-            "where a.ownerAccountId = : ownerAccountId " +
-            "and a.timestamp >= : since")
+            "where a.ownerAccountId=:ownerAccountId " +
+            "and a.timestamp>=:since")
     List<ActivityJpaEntity> findByOwnerSince(
             @Param("ownerAccountId") Long ownerAccountId,
             @Param("since") LocalDateTime since);
 
     @Query("select sum(a.money) from ActivityJpaEntity a " +
-            "where a.ownerAccountId = : accountId " +
-            "and a.targetAccountId = : accountId " +
-            "and a.timestamp < : until")
+            "where a.ownerAccountId=:accountId " +
+            "and a.targetAccountId=:accountId " +
+            "and a.timestamp<:until")
     Long getDepositBalanceUntil(
             @Param("accountId") Long accountId,
             @Param("until") LocalDateTime until);
 
     @Query("select sum(a.money) from ActivityJpaEntity a " +
-            "where a.ownerAccountId = : accountId " +
-            "and a.sourceAccountId = : accountId " +
-            "and a.timestamp < : until")
+            "where a.ownerAccountId=:accountId " +
+            "and a.sourceAccountId=:accountId " +
+            "and a.timestamp<:until")
     Long getWithdrawalBalanceUntil(
             @Param("accountId") Long accountId,
             @Param("until") LocalDateTime until);

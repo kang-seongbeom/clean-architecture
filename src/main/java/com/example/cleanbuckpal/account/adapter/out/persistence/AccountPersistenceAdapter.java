@@ -6,10 +6,12 @@ import com.example.cleanbuckpal.account.domain.Account;
 import com.example.cleanbuckpal.account.domain.Activity;
 import javax.persistence.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Component
 @RequiredArgsConstructor
 class AccountPersistenceAdapter implements LoadAccountPort, UpdateAccountStatePort {
 

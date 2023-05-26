@@ -1,4 +1,4 @@
-package com.example.cleanbuckpal.application.common;
+package com.example.cleanbuckpal.common;
 
 import com.example.cleanbuckpal.account.domain.Account;
 import com.example.cleanbuckpal.account.domain.Account.AccountId;

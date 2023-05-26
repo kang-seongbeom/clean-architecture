@@ -1,4 +1,4 @@
-package com.example.cleanbuckpal.application.service;
+package com.example.cleanbuckpal.account.application.service;
 
 import com.example.cleanbuckpal.account.application.port.in.SendMoneyCommand;
 import com.example.cleanbuckpal.account.application.port.out.AccountLock;
