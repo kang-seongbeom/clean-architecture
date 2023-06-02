@@ -6,9 +6,11 @@ import com.example.cleanbuckpal.account.domain.Account;
 import com.example.cleanbuckpal.account.domain.Account.AccountId;
 import com.example.cleanbuckpal.account.domain.Money;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
+@Component
 @RequiredArgsConstructor
 public class GetAccountBalanceService implements GetAccountBalanceQuery {
 

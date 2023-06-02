@@ -8,11 +8,13 @@ import com.example.cleanbuckpal.account.application.port.out.UpdateAccountStateP
 import com.example.cleanbuckpal.account.domain.Account;
 import com.example.cleanbuckpal.account.domain.Account.AccountId;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 
 @Transactional
+@UseCase
 @RequiredArgsConstructor
 public class SendMoneyService implements SendMoneyUseCase {
 
